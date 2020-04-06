@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-swiftproject-swiftprojectUITests/Pods-swiftproject-swiftprojectUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
