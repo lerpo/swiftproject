@@ -6,6 +6,13 @@ target 'swiftproject' do
   use_frameworks!
   pod 'Alamofire', '~> 5.1'
   pod 'HandyJSON', '~> 5.0.1'
+  pod 'Kingfisher', '~> 5.0'
+  pod 'SnapKit','~> 5.0.0'
+  pod 'SwiftyJSON'
+  pod 'MJRefresh'
+#  pod 'DoraemonKit/Core', '~> 3.0.0', :configurations => ['Debug'] #Required
+#  pod 'DoraemonKit/WithGPS', '~> 3.0.0', :configurations => ['Debug'] #Optional
+#  pod 'DoraemonKit/WithLoad', '~> 3.0.0', :configurations => ['Debug'] #Optional
   # Pods for swiftproject
 
   target 'swiftprojectTests' do
