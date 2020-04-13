@@ -28,13 +28,14 @@ class HomeViewController: UIViewController {
 
     func loadData() {
         let url = "http://api.avatardata.cn/Joke/QueryJokeByTime?key=bd15315552784d3a9716f425e2f533c4&page=1&rows=50&sort=asc&time=1418745237"
+        NoticeUtil.instance.showNotice(context:self, message: "加载中...")
         RequestUtil.get(url: url,success: { (data) -> (Void) in
            
             self.dataList = (JsonUtil.jsonArrayToModel(data["result"].rawString()!,NewsModel.self) as! [NewsModel])
             self.tableView.reloadData()
-          
+            NoticeUtil.instance.hideNotice()
         }) { (data) -> (Void) in
-                   
+            NoticeUtil.instance.hideNotice()
         }
     }
 }

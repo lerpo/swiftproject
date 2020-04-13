@@ -14,5 +14,6 @@
 #import<Kingfisher/Kingfisher.h>
 #import<MJRefresh/MJRefresh.h>
 #import<SnapKit/SnapKit-Swift.h>
+#import<MBProgressHUD/MBProgressHUD.h>
 
 #endif /* SwiftOC_Header_h */

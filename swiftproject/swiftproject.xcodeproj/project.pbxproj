@@ -32,6 +32,7 @@
 		0451F37C2442D2EE00567A02 /* PicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F37B2442D2EE00567A02 /* PicModel.swift */; };
 		0451F37F2443041D00567A02 /* FindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F37E2443041D00567A02 /* FindCell.swift */; };
 		0451F3832443046C00567A02 /* FindCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0451F3822443046C00567A02 /* FindCell.xib */; };
+		04F21B8B244496FE00831E8F /* NoticeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F21B8A244496FE00831E8F /* NoticeUtil.swift */; };
 		635E988991285235EB3BD5B7 /* Pods_swiftproject_swiftprojectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F6927710973BF5C844532 /* Pods_swiftproject_swiftprojectUITests.framework */; };
 		F34A350A435B034E0AA7989E /* Pods_swiftprojectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 211F95C149CA20D726EDB0D8 /* Pods_swiftprojectTests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		0451F37B2442D2EE00567A02 /* PicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicModel.swift; sourceTree = "<group>"; };
 		0451F37E2443041D00567A02 /* FindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCell.swift; sourceTree = "<group>"; };
 		0451F3822443046C00567A02 /* FindCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindCell.xib; sourceTree = "<group>"; };
+		04F21B8A244496FE00831E8F /* NoticeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeUtil.swift; sourceTree = "<group>"; };
 		16ABDFF25124E8EA7AE9AC0D /* Pods-swiftproject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftproject.debug.xcconfig"; path = "Target Support Files/Pods-swiftproject/Pods-swiftproject.debug.xcconfig"; sourceTree = "<group>"; };
 		211F95C149CA20D726EDB0D8 /* Pods_swiftprojectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftprojectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		280F6927710973BF5C844532 /* Pods_swiftproject_swiftprojectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftproject_swiftprojectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +259,7 @@
 		0451F3672441831C00567A02 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				04F21B89244496D200831E8F /* notice */,
 				0451F3732441C52400567A02 /* Utility */,
 				0451F3702441C1E700567A02 /* Log */,
 				0451F3692441A42800567A02 /* JsonUtil */,
@@ -313,6 +316,14 @@
 				0451F3822443046C00567A02 /* FindCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		04F21B89244496D200831E8F /* notice */ = {
+			isa = PBXGroup;
+			children = (
+				04F21B8A244496FE00831E8F /* NoticeUtil.swift */,
+			);
+			path = notice;
 			sourceTree = "<group>";
 		};
 		D194413BBFB6F0888EDA5564 /* Pods */ = {
@@ -589,6 +600,7 @@
 				0451F36F2441BDD200567A02 /* BaseModel.swift in Sources */,
 				0451F31E243AE03800567A02 /* AppDelegate.swift in Sources */,
 				0451F320243AE03800567A02 /* SceneDelegate.swift in Sources */,
+				04F21B8B244496FE00831E8F /* NoticeUtil.swift in Sources */,
 				0451F37A2441FBBE00567A02 /* NewsCellTableViewCell.swift in Sources */,
 				0451F37F2443041D00567A02 /* FindCell.swift in Sources */,
 				0451F358243B253700567A02 /* FindViewController.swift in Sources */,

@@ -10,6 +10,7 @@ target 'swiftproject' do
   pod 'SnapKit','~> 5.0.0'
   pod 'SwiftyJSON'
   pod 'MJRefresh'
+  pod 'MBProgressHUD', '~> 1.2.0'
 #  pod 'DoraemonKit/Core', '~> 3.0.0', :configurations => ['Debug'] #Required
 #  pod 'DoraemonKit/WithGPS', '~> 3.0.0', :configurations => ['Debug'] #Optional
 #  pod 'DoraemonKit/WithLoad', '~> 3.0.0', :configurations => ['Debug'] #Optional

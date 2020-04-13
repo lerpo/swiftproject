@@ -27,12 +27,14 @@ class FindViewController: UIViewController {
 
     func loadData() {
         let url = "https://route.showapi.com/852-2?showapi_appid=169505&showapi_sign=88732d60b8454ceb8357503618564834&type=4001&page=1"
+        NoticeUtil.instance.showNotice(context:self, message: "加载中...")
         RequestUtil.get(url: url,success: { (data) -> (Void) in
            
             self.dataList = (JsonUtil.jsonArrayToModel(data["showapi_res_body"]["pagebean"]["contentlist"].rawString()!,PicModel.self) as! [PicModel])
             self.tableview.reloadData()
+            NoticeUtil.instance.hideNotice()
         }) { (data) -> (Void) in
-                   
+            NoticeUtil.instance.hideNotice()
         }
     }
 }
