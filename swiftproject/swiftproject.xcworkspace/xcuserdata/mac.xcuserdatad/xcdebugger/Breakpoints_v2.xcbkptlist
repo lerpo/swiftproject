@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E8DE7F8B-4DF4-4E5B-89EA-91953C26677C"
+            uuid = "6BFD5A31-70DF-4FCC-8AFA-D8F4FF2717B5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "swiftproject/Controller/Find/FindViewController.swift"
+            filePath = "swiftproject/Controller/Mine/MineViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "goOrderdetail()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

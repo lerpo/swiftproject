@@ -11,6 +11,8 @@ target 'swiftproject' do
   pod 'SwiftyJSON'
   pod 'MJRefresh'
   pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'FMDB'
+  pod "ActiveSQLite"
 #  pod 'DoraemonKit/Core', '~> 3.0.0', :configurations => ['Debug'] #Required
 #  pod 'DoraemonKit/WithGPS', '~> 3.0.0', :configurations => ['Debug'] #Optional
 #  pod 'DoraemonKit/WithLoad', '~> 3.0.0', :configurations => ['Debug'] #Optional

@@ -24,7 +24,8 @@ class TabBarViewController: UITabBarController {
         _ image:String,
         _ selectImage:String,
         _ type:UIViewController.Type)->(){
-        let child = UINavigationController(rootViewController: type.init())
+        let child = NavigationController(rootViewController: type.init())
+        child.setValue(NavigationBar(), forKey: "navigationBar")
         child.title = title
         child.tabBarItem.image = UIImage(named: image)
         child.tabBarItem.selectedImage = UIImage(named: selectImage)

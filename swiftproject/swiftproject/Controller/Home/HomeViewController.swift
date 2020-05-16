@@ -21,13 +21,14 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(NewsCellTableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         tableView.separatorStyle = .none
+    
         view.addSubview(tableView)
         loadData()
     }
     
 
     func loadData() {
-        let url = "http://api.avatardata.cn/Joke/QueryJokeByTime?key=bd15315552784d3a9716f425e2f533c4&page=1&rows=50&sort=asc&time=1418745237"
+        let url = "http://api.avatardata.cn/Joke/QueryJokeByTime?key=bd15315552784d3a9716f425e2f533c4&page=1&rows=1000&sort=asc&time=1418745237"
         NoticeUtil.instance.showNotice(context:self, message: "加载中...")
         RequestUtil.get(url: url,success: { (data) -> (Void) in
            
@@ -52,14 +53,15 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
             
         let mode:NewsModel = dataList![indexPath.row]
             
-        var cell:NewsCellTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NewsCellTableViewCell
-        if cell == nil  {
-            cell = NewsCellTableViewCell(style: .default, reuseIdentifier: "cell")
-        }
+        let cell:NewsCellTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NewsCellTableViewCell
+//        if cell == nil  {
+//            cell = NewsCellTableViewCell(style: .default, reuseIdentifier: "cell")
+//        }
         
-        cell.imgView?.image = UIImage(named: "AppIcon")
+        cell.imgView?.image = UIImage(named: "joke_icon")
         cell.contentLable?.text = mode.content
         cell.timeLable?.text = mode.updatetime
+        cell.selectionStyle = .none
         
         return cell
         
@@ -68,6 +70,12 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailController:HomeViewDetailViewController = HomeViewDetailViewController();
+        detailController.model = dataList![indexPath.row]
+        self.navigationController?.pushViewController(detailController, animated: true)
     }
     
     

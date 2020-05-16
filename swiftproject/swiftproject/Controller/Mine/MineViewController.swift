@@ -10,11 +10,14 @@ import UIKit
 
 class MineViewController: UIViewController {
 
+    @IBOutlet weak var myOrder: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "我的"
+        let tap = UITapGestureRecognizer(target:self, action:#selector(goOrderdetail))
+        myOrder.addGestureRecognizer(tap)
         
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -27,14 +30,9 @@ class MineViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.navigationBar.isHidden = false
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func goOrderdetail()  {
+        let ordercontroller:MyOrderViewController = MyOrderViewController(nibName: "MyOrderViewController", bundle: nil)
+        self.navigationController?.pushViewController(ordercontroller, animated: true)
     }
-    */
-
 }
