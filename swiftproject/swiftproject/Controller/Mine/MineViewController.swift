@@ -32,7 +32,9 @@ class MineViewController: UIViewController {
     }
     
     @objc func goOrderdetail()  {
-        let ordercontroller:MyOrderViewController = MyOrderViewController(nibName: "MyOrderViewController", bundle: nil)
+        let MyStoryboard = UIStoryboard.init(name: "MyOrderViewController", bundle: nil)
+        let ordercontroller:MyOrderViewController = MyStoryboard.instantiateViewController(withIdentifier: "MyOrderViewController") as! MyOrderViewController
+        
         self.navigationController?.pushViewController(ordercontroller, animated: true)
     }
 }

@@ -58,7 +58,8 @@ extension FindViewController:UITableViewDataSource,UITableViewDelegate {
         let pic:Picture = self.dataList![indexPath.section].list[indexPath.row]
         let urlwithPercentEscapes = pic.middle.addingPercentEncoding( withAllowedCharacters: .urlQueryAllowed)
         let imgu:URL = URL.init(string: urlwithPercentEscapes!)!
-        cell.imageV.kf.setImage(with:imgu)
+        cell.imageV.kf.indicatorType = .activity
+        cell.imageV.kf.setImage(with:imgu,placeholder: UIImage(named: "frend_bg"),options: [.transition(.fade(0.2))])
         
         return cell
     }
@@ -85,9 +86,4 @@ extension FindViewController:UITableViewDataSource,UITableViewDelegate {
         
         return titleLable
     }
-    
-    
-    
-    
-    
 }

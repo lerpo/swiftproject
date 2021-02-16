@@ -13,4 +13,5 @@ class NewsModel: BaseModel {
      var hashId: String = ""
      var unixtime: String = ""
      var updatetime: String = ""
+    
 }

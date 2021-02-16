@@ -5,8 +5,6 @@
 //  Created by iqusong on 2018/4/28.
 //  Copyright © 2018年 iqusong. All rights reserved.
 //
-
-import UIKit
 import HandyJSON
 class BaseModel: HandyJSON {
 //    var date: Date?

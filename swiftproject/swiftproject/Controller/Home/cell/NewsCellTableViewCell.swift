@@ -9,9 +9,13 @@
 import UIKit
 
 class NewsCellTableViewCell: UITableViewCell {
-    var imgView:UIImageView?
-    var contentLable:UILabel?
+    var userImg:UIImageView?
+    var userContent: UIView?
+    var userHeadImg:UIImageView?
+    var userNameLable:UILabel?
     var timeLable:UILabel?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,48 +27,74 @@ class NewsCellTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.imgView = UIImageView()
-        self.contentView.addSubview(self.imgView!)
         
-        self.contentLable = UILabel()
-        self.contentView.addSubview(self.contentLable!)
+        self.userImg = UIImageView()
+        self.contentView.addSubview(self.userImg!)
+        
+        self.userContent = UIView()
+        self.contentView.addSubview(self.userContent!)
+        
+        self.userHeadImg = UIImageView()
+        self.userContent!.addSubview(self.userHeadImg!)
+        
+        self.userNameLable = UILabel()
+        self.userContent!.addSubview(self.userNameLable!)
         
         self.timeLable = UILabel()
-        self.contentView.addSubview(self.timeLable!)
+        self.userContent!.addSubview(self.timeLable!)
         
         setUpViews()
     }
     
     func setUpViews() {
         
-        self.imgView?.snp.makeConstraints({ (make) in
+        self.userImg?.snp.makeConstraints({ (make) in
             make.top.equalToSuperview().offset(15)
             make.left.equalToSuperview().offset(15)
-            make.bottom.equalToSuperview().offset(0)
-            make.width.equalTo(50)
-//            make.height.equalTo(50)
+            make.right.equalToSuperview().offset(-15)
+            make.height.equalTo(400)
             
         })
-        self.imageView?.backgroundColor = UIColor.gray
-        self.imageView?.contentMode = UIView.ContentMode.scaleAspectFill
+        self.imageView?.contentMode = UIView.ContentMode.scaleToFill
         
-        self.contentLable?.snp.makeConstraints({ (make) in
-            make.top.equalToSuperview().offset(15)
-            make.left.equalTo(self.imgView!.snp.right).offset(10)
-            make.right.equalToSuperview().offset(15)
-            make.bottom.equalTo(self.timeLable!.snp.top).offset(5)
+        self.userContent?.snp.makeConstraints({ (make) in
+            make.top.equalTo(self.userImg!.snp.bottom).offset(0)
+            make.left.equalToSuperview().offset(0)
+            make.right.equalToSuperview().offset(0)
+            make.height.equalTo(88)
         })
-        self.contentLable?.numberOfLines = 2
-        self.contentLable?.textAlignment = .left
+        self.userContent?.backgroundColor = ColorConstant.LINE_GRAY
+        
+        self.userHeadImg?.snp.makeConstraints({ (make) in
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(15)
+            make.width.equalTo(50)
+            make.height.equalTo(50)
+         })
+        self.userHeadImg?.layer.cornerRadius = 25
+        self.userHeadImg?.layer.masksToBounds = true
         
         self.timeLable?.snp.makeConstraints({ (make) in
-            make.left.equalTo(self.imgView!.snp.right).offset(10)
-//            make.top.equalTo(self.contentLable!.snp.bottom).offset(5)
-            make.bottom.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(15)
+            make.left.equalTo(self.userHeadImg!.snp.right).offset(10)
+            make.top.equalToSuperview().offset(5)
+            make.bottom.equalToSuperview().offset(-10)
+            make.right.equalToSuperview().offset(-15)
         })
-        self.timeLable?.font = UIFont.systemFont(ofSize: 12)
-        self.timeLable?.textAlignment = .left
+        self.timeLable?.font = UIFont.systemFont(ofSize: 15)
+        self.timeLable?.textAlignment = .center
+        self.timeLable?.textColor = .gray
+        
+        self.userNameLable?.snp.makeConstraints({ (make) in
+            make.top.equalTo(self.userHeadImg!.snp.bottom).offset(5)
+            make.left.equalToSuperview().offset(15)
+            make.width.equalTo(100)
+            make.bottom.equalToSuperview().offset(-10)
+        })
+        self.userNameLable?.font = UIFont.systemFont(ofSize: 18)
+        self.userNameLable?.textAlignment = .left
+        self.userNameLable?.textColor = .gray
+        
+        
     }
    
     override func layoutSubviews() {

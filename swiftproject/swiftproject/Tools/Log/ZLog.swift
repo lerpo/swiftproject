@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 class ZLog
 {
     static func d<T>(_ value: T)
@@ -17,3 +16,6 @@ class ZLog
         print(value)
     }
 }
+
+
+
