@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import SwiftTools
 
 class HomeViewController: UIViewController {
 

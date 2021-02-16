@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftTools
 
 class NewsModel: BaseModel {
      var content: String = ""

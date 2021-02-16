@@ -5,6 +5,7 @@
 //  Created by 徐孟良 on 2021/2/14.
 //  Copyright © 2021 mac. All rights reserved.
 //
+import SwiftTools
 
 class TaoModel: BaseModel {
     var allPages:Int = 0

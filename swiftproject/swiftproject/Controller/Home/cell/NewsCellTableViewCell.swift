@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftTools
 class NewsCellTableViewCell: UITableViewCell {
     var userImg:UIImageView?
     var userContent: UIView?
