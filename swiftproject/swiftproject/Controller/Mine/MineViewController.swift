@@ -10,22 +10,31 @@ import UIKit
 
 class MineViewController: UIViewController {
 
+    @IBOutlet weak var myOrder: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.orange
         title = "我的"
-        // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target:self, action:#selector(goOrderdetail))
+        myOrder.addGestureRecognizer(tap)
+        
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
-    */
-
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc func goOrderdetail()  {
+        let MyStoryboard = UIStoryboard.init(name: "MyOrderViewController", bundle: nil)
+        let ordercontroller:MyOrderViewController = MyStoryboard.instantiateViewController(withIdentifier: "MyOrderViewController") as! MyOrderViewController
+        
+        self.navigationController?.pushViewController(ordercontroller, animated: true)
+    }
 }

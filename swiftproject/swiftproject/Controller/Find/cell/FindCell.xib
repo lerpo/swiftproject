@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="FindCell" customModule="逸动中国" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="571" height="330"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m89-gM-gWs">
+                    <rect key="frame" x="0.0" y="0.0" width="571" height="329"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-Jm-hkc">
+                    <rect key="frame" x="0.0" y="329" width="571" height="1"/>
+                    <color key="backgroundColor" red="0.96435127202710957" green="0.96435127202710957" blue="0.96435127202710957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0Gf-Jm-hkc" secondAttribute="trailing" id="1c5-aU-wfl"/>
+                <constraint firstItem="0Gf-Jm-hkc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IKr-89-qZ1"/>
+                <constraint firstAttribute="bottom" secondItem="m89-gM-gWs" secondAttribute="bottom" constant="1" id="Kcy-LJ-UTw"/>
+                <constraint firstAttribute="bottom" secondItem="0Gf-Jm-hkc" secondAttribute="bottom" id="Rg5-ZS-Q67"/>
+                <constraint firstItem="0Gf-Jm-hkc" firstAttribute="top" secondItem="m89-gM-gWs" secondAttribute="bottom" id="TJr-PA-Z84"/>
+                <constraint firstAttribute="trailing" secondItem="m89-gM-gWs" secondAttribute="trailing" id="r5J-fP-LvE"/>
+                <constraint firstItem="m89-gM-gWs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zH3-oc-8BV"/>
+                <constraint firstItem="m89-gM-gWs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zN1-0s-alW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageV" destination="m89-gM-gWs" id="9ck-b5-dK6"/>
+                <outlet property="imageView" destination="m89-gM-gWs" id="NHw-fz-IzA"/>
+            </connections>
+            <point key="canvasLocation" x="251.44927536231887" y="-81.696428571428569"/>
+        </view>
+    </objects>
+</document>
