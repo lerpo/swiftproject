@@ -14,7 +14,6 @@ target 'swiftproject' do
   pod 'FMDB'
   pod "ActiveSQLite"
   pod 'SwiftTools','~>1.0.3'
-#  :git => 'http://127.0.0.1:8088/xml/tools.git'
 #  pod 'DoraemonKit/Core', '~> 3.0.0', :configurations => ['Debug'] #Required
 #  pod 'DoraemonKit/WithGPS', '~> 3.0.0', :configurations => ['Debug'] #Optional
 #  pod 'DoraemonKit/WithLoad', '~> 3.0.0', :configurations => ['Debug'] #Optional
